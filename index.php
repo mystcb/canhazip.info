@@ -142,5 +142,7 @@ switch($requested_format) {
 		print $ip . "\n";
 	break;
 }
-@geoip_close($gi);
+if(function_exists("geoip_close")) {
+	@geoip_close($gi);
+}
 ?>
